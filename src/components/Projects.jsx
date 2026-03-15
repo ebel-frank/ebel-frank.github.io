@@ -13,7 +13,7 @@ import metricsImg from '../assets/metrics.jpg';
 const projects = [
     {
         title: "Cloud Native Web Service (In Progress)",
-        description: "Developed a distributed ETL pipeline using Spark and Databricks on GCP Dataproc, optimized for cost and performance. Exported processed data into AWS EBS and mounted it as a PersistentVolume to a pod in a Kubernetes cluster. Currently Optimizing for cost and performance.",
+        description: "Developed a distributed ETL pipeline using Spark and Databricks on GCP Dataproc. Exported processed data into AWS EBS and mounted it as a PersistentVolume to a pod in a Kubernetes cluster. currently optimizing for cost and performance.",
         fullDescription: "Developed a distributed ETL pipeline using Spark and Databricks on GCP Dataproc, optimized based on cost and performance benchmarks. Exported processed data into an AWS EBS volume and mounted the data as a PersistentVolume to a pod running inside a Kubernetes cluster — enabling cross-cloud data portability and persistent storage for stateful workloads.",
         features: [
             "Distributed ETL pipeline with Spark & Databricks on GCP Dataproc",
