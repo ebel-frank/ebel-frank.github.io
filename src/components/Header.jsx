@@ -11,7 +11,7 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const navItems = ['About', 'Projects', 'Resume', 'Blog', 'Contact'];
+    const navItems = ['About', 'Projects', 'Contact'];
 
     return (
         <header style={{

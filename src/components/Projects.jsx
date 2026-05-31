@@ -9,6 +9,7 @@ import twitterImg from '../assets/twitter_web_service.png';
 import scaleInImg from '../assets/scale_in.jpg';
 import scaleOutImg from '../assets/scale_out.jpg';
 import metricsImg from '../assets/metrics.jpg';
+import nycModelImg from '../assets/nyc_model.png';
 
 const projects = [
     {
@@ -46,6 +47,24 @@ const projects = [
         category: "CLOUD",
         cover: true,
         image: architectureImg,
+        hasModal: true
+    },
+    {
+        title: "Intelligent Fare Prediction & Voice Assistant",
+        description: "Built a production-grade ride fare prediction and voice-enabled AI assistant on GCP with automated ML workflows, REST serving, and real-time recommendations.",
+        fullDescription: "Architected and deployed a production-grade ride fare prediction platform on GCP, engineering geospatial and time-based features to train an XGBoost model via containerized Cloud Run Jobs with automated hyperparameter optimization. Served the model through Vertex AI with a REST prediction layer on Google App Engine, achieving sub-6 RMSE on live fare data. Integrated a voice-enabled AI assistant using Speech-to-Text, Text-to-Speech, and NLP APIs, backed by a RAG pipeline (Vertex AI + Llama 3.1) and an agentic workflow (LangGraph + Gemini) to handle real-time ride queries and location-aware recommendations across the city.",
+        features: [
+            "Feature-engineered geospatial and time-series data for fare modeling",
+            "Automated hyperparameter tuning with containerized Cloud Run Jobs",
+            "Production REST serving through Vertex AI and App Engine",
+            "Voice assistant powered by Speech-to-Text, Text-to-Speech, and NLP APIs",
+            "RAG pipeline with Vertex AI + Llama 3.1 and agentic workflows via LangGraph + Gemini"
+        ],
+        tech: ["GCP", "XGBoost", "Vertex AI", "Cloud Run", "App Engine", "Speech-to-Text", "Text-to-Speech", "RAG", "LangGraph", "Gemini"],
+        link: "#",
+        category: "AI on Cloud",
+        cover: false,
+        image: nycModelImg,
         hasModal: true
     },
     {
