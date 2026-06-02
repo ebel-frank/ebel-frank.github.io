@@ -24,7 +24,7 @@ const About = () => {
                         gap: '0.5rem',
                         listStyle: 'none',
                     }}>
-                        {['Azure Pipelines / GitHub Actions', 'Docker & Kubernetes', 'Terraform / Ansible', 'AWS & Cloud Platforms', 'Firebase & Observability', 'Python & Bash Scripting'].map(skill => (
+                        {['Terraform / CloudFormation', 'Docker & Kubernetes', 'Jenkins / GitHub Actions', 'AWS & Multi-Cloud', 'Cloud Security & Cost Optimization', 'AI-Driven Operations (AIOps)'].map(skill => (
                             <li key={skill} className="mono" style={{ fontSize: '1.1rem', color: 'var(--text-primary)' }}>▹ {skill}</li>
                         ))}
                     </ul>

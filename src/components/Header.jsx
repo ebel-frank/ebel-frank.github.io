@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation, Link } from 'react-router-dom';
 
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
+    const location = useLocation();
+    const isHomepage = location.pathname === '/';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -11,7 +14,14 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const navItems = ['About', 'Projects', 'Contact'];
+    const sectionLinks = [
+        { label: 'About', id: 'about' },
+        { label: 'Experience', id: 'experience' },
+        { label: 'Projects', id: 'projects' },
+        { label: 'Contact', id: 'contact' },
+    ];
+
+    const linkStyle = { fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em' };
 
     return (
         <header style={{
@@ -40,16 +50,23 @@ const Header = () => {
                 </a>
 
                 <nav style={{ display: 'flex', gap: '2rem' }}>
-                    {navItems.map(item => (
+                    {sectionLinks.map(({ label, id }) => (
                         <a
-                            key={item}
-                            href={`#${item.toLowerCase()}`}
+                            key={label}
+                            href={isHomepage ? `#${id}` : `/#${id}`}
                             className="mono"
-                            style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}
+                            style={linkStyle}
                         >
-                            {item}
+                            {label}
                         </a>
                     ))}
+                    <Link
+                        to="/resume"
+                        className="mono"
+                        style={linkStyle}
+                    >
+                        Resume
+                    </Link>
                 </nav>
             </div>
         </header>

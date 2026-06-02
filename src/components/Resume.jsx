@@ -1,10 +1,10 @@
-import resumePdf from '../assets/resume.pdf';
+import { Link } from 'react-router-dom';
 
 const Resume = () => {
     return (
         <section id="resume" style={{ padding: '4rem 0' }}>
             <h2 className="section-title">
-                <span className="mono" style={{ fontSize: '1.2rem', color: 'var(--text-primary)' }}>03.</span> Resume
+                <span className="mono" style={{ fontSize: '1.2rem', color: 'var(--text-primary)' }}>04.</span> Resume
             </h2>
 
             <div style={{
@@ -17,10 +17,8 @@ const Resume = () => {
                 alignItems: 'center',
                 gap: '2rem'
             }}>
-                <a
-                    href={resumePdf}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <Link
+                    to="/resume"
                     className="mono"
                     style={{
                         padding: '1.2rem 2.5rem',
@@ -44,7 +42,7 @@ const Resume = () => {
                     }}
                 >
                     View Full Resume ↗
-                </a>
+                </Link>
             </div>
         </section>
     );

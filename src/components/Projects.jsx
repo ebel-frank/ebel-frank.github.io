@@ -286,7 +286,7 @@ const Projects = () => {
     return (
         <section id="projects">
             <h2 className="section-title">
-                <span className="mono" style={{ fontSize: '1.2rem', color: 'var(--text-primary)' }}>02.</span> Projects
+                <span className="mono" style={{ fontSize: '1.2rem', color: 'var(--text-primary)' }}>03.</span> Projects
             </h2>
 
             <div style={{
