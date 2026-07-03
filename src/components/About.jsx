@@ -46,13 +46,8 @@ const About = () => {
                         height: 'auto',
                         borderRadius: '0.5rem',
                         position: 'relative',
-                        zIndex: 1,
-                        filter: 'grayscale(100%)',
-                        transition: 'filter 0.3s ease'
-                    }}
-                        onMouseEnter={e => e.currentTarget.style.filter = 'none'}
-                        onMouseLeave={e => e.currentTarget.style.filter = 'grayscale(100%)'}
-                    />
+                        zIndex: 1
+                    }} />
                 </div>
             </div>
         </section>
