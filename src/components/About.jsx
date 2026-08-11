@@ -1,4 +1,5 @@
 import profileImg from '../assets/profile.jpg';
+import Reveal from './Reveal';
 
 const About = () => {
     return (
@@ -8,7 +9,7 @@ const About = () => {
             </h2>
 
             <div className="about-grid">
-                <div style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
+                <Reveal style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
                     <p style={{ marginBottom: '1.5rem' }}>
                         I am a Cloud & DevOps Engineer with a strong foundation in CI/CD automation, infrastructure as code, and cloud-native systems. I design and maintain pipelines and observability stacks that make software delivery reliable and fast.
                     </p>
@@ -28,9 +29,9 @@ const About = () => {
                             <li key={skill} className="mono" style={{ fontSize: '1.1rem', color: 'var(--text-primary)' }}>▹ {skill}</li>
                         ))}
                     </ul>
-                </div>
+                </Reveal>
 
-                <div style={{ marginBottom: '2rem', position: 'relative' }}>
+                <Reveal delay={0.15} style={{ marginBottom: '2rem', position: 'relative' }}>
                     <div style={{
                         position: 'absolute',
                         top: '15px',
@@ -48,7 +49,7 @@ const About = () => {
                         position: 'relative',
                         zIndex: 1
                     }} />
-                </div>
+                </Reveal>
             </div>
         </section>
     );

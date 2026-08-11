@@ -1,3 +1,5 @@
+import Reveal from './Reveal';
+
 const experiences = [
   {
     title: "AWS Cloud Engineer",
@@ -37,8 +39,9 @@ const Experience = () => {
         gap: '3rem',
       }}>
         {experiences.map((exp, index) => (
-          <div
+          <Reveal
             key={index}
+            delay={index * 0.1}
             style={{
               padding: '2rem',
               border: '1px solid var(--border)',
@@ -76,7 +79,7 @@ const Experience = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
         ))}
       </div>
     </section>

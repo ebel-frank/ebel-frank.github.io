@@ -10,6 +10,7 @@ import scaleInImg from '../assets/scale_in.jpg';
 import scaleOutImg from '../assets/scale_out.jpg';
 import metricsImg from '../assets/metrics.jpg';
 import nycModelImg from '../assets/nyc_model.png';
+import Reveal from './Reveal';
 
 const projects = [
     {
@@ -239,7 +240,7 @@ const ProjectModal = ({ project, onClose }) => {
                             <span key={t} className="mono" style={{
                                 fontSize: '0.75rem',
                                 padding: '0.4rem 0.8rem',
-                                background: 'rgba(255,255,255,0.05)',
+                                background: 'var(--chip-bg)',
                                 border: '1px solid var(--border)',
                                 borderRadius: '4px'
                             }}>{t}</span>
@@ -290,16 +291,26 @@ const Projects = () => {
             </h2>
 
             <div style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '6rem'
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                gap: '2.5rem'
             }}>
                 {projects.map((proj, idx) => (
-                    <div key={idx} className="project-card">
+                    <Reveal
+                        key={idx}
+                        delay={(idx % 3) * 0.1}
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            border: '1px solid var(--border)',
+                            borderRadius: '0.5rem',
+                            backgroundColor: 'var(--bg-primary)',
+                            overflow: 'hidden',
+                        }}
+                    >
                         <div style={{
                             backgroundColor: 'var(--bg-secondary)',
                             aspectRatio: '16/9',
-                            border: '1px solid var(--border)',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
@@ -314,47 +325,63 @@ const Projects = () => {
                             )}
                         </div>
 
-                        <div>
+                        <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
                             <div className="mono" style={{ color: 'var(--text-secondary)', fontSize: '0.7rem', marginBottom: '0.5rem' }}>{proj.category}</div>
-                            <h3 style={{ fontSize: '1.75rem', marginBottom: '1.5rem' }}>{proj.title}</h3>
-                            <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', lineHeight: 1.7 }}>
+                            <h3 style={{ fontSize: '1.2rem', marginBottom: '0.75rem' }}>{proj.title}</h3>
+                            <p style={{
+                                color: 'var(--text-secondary)',
+                                marginBottom: '1.25rem',
+                                lineHeight: 1.6,
+                                fontSize: '0.9rem',
+                                display: '-webkit-box',
+                                WebkitLineClamp: 3,
+                                WebkitBoxOrient: 'vertical',
+                                overflow: 'hidden'
+                            }}>
                                 {proj.description}
                             </p>
-                            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
-                                {proj.tech.map(t => (
+                            <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1.25rem' }}>
+                                {proj.tech.slice(0, 3).map(t => (
                                     <span key={t} className="mono" style={{
-                                        fontSize: '0.75rem',
+                                        fontSize: '0.7rem',
                                         color: 'var(--text-primary)',
                                         padding: '0.2rem 0.6rem',
-                                        background: 'rgba(255, 255, 255, 0.05)',
+                                        background: 'var(--chip-bg)',
                                         border: '1px solid var(--border)',
                                         borderRadius: '4px'
                                     }}>{t}</span>
                                 ))}
+                                {proj.tech.length > 3 && (
+                                    <span className="mono" style={{ fontSize: '0.7rem', color: 'var(--text-secondary)', padding: '0.2rem 0.4rem' }}>
+                                        +{proj.tech.length - 3}
+                                    </span>
+                                )}
                             </div>
-                            {proj.hasModal ? (
-                                <button
-                                    onClick={() => setSelectedProject(proj)}
-                                    className="mono"
-                                    style={{
-                                        fontSize: '0.8rem',
-                                        textDecoration: 'underline',
-                                        background: 'none',
-                                        border: 'none',
-                                        color: 'inherit',
-                                        cursor: 'pointer',
-                                        padding: 0
-                                    }}
-                                >
-                                    View Project Details ↗
-                                </button>
-                            ) : (
-                                <a href={proj.link} className="mono" style={{ fontSize: '0.8rem', textDecoration: 'underline' }}>
-                                    View Project ↗
-                                </a>
-                            )}
+                            <div style={{ marginTop: 'auto' }}>
+                                {proj.hasModal ? (
+                                    <button
+                                        onClick={() => setSelectedProject(proj)}
+                                        className="mono"
+                                        style={{
+                                            fontSize: '0.8rem',
+                                            textDecoration: 'underline',
+                                            background: 'none',
+                                            border: 'none',
+                                            color: 'inherit',
+                                            cursor: 'pointer',
+                                            padding: 0
+                                        }}
+                                    >
+                                        View Details ↗
+                                    </button>
+                                ) : (
+                                    <a href={proj.link} target="_blank" rel="noopener noreferrer" className="mono" style={{ fontSize: '0.8rem', textDecoration: 'underline' }}>
+                                        View Project ↗
+                                    </a>
+                                )}
+                            </div>
                         </div>
-                    </div>
+                    </Reveal>
                 ))}
             </div>
 

@@ -1,5 +1,6 @@
 import awsCert from '../assets/aws-cp-cert.jpg';
 import kcnaCert from '../assets/kcna_certificate.jpg';
+import Reveal from './Reveal';
 
 const certifications = [
     {
@@ -29,8 +30,9 @@ const Certifications = () => {
                 gap: '3rem',
             }}>
                 {certifications.map((cert, index) => (
-                    <div
+                    <Reveal
                         key={index}
+                        delay={index * 0.15}
                         style={{
                             border: '1px solid var(--border)',
                             borderRadius: '0.5rem',
@@ -70,7 +72,7 @@ const Certifications = () => {
                                 View Certificate ↗
                             </a>
                         </div>
-                    </div>
+                    </Reveal>
                 ))}
             </div>
         </section>
