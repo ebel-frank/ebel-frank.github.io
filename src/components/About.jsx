@@ -14,7 +14,7 @@ const About = () => {
                         I am a Cloud & DevOps Engineer with a strong foundation in CI/CD automation, infrastructure as code, and cloud-native systems. I design and maintain pipelines and observability stacks that make software delivery reliable and fast.
                     </p>
                     <p style={{ marginBottom: '1.5rem' }}>
-                        Before moving into ops, I spent years shipping production mobile apps — managing <span style={{ color: 'var(--text-primary)' }}>build pipelines, crash monitoring, and multi-platform releases</span> firsthand. That experience gave me a developer-first lens on infrastructure: I know what good DevOps feels like from both sides of the deployment boundary.
+                        Before moving into ops, I spent years shipping production mobile apps, managing <span style={{ color: 'var(--text-primary)' }}>build pipelines, crash monitoring, and multi-platform releases</span> . That experience gave me a developer-first lens on infrastructure: I know what good DevOps feels like from both sides of the deployment boundary.
                     </p>
                     <p style={{ marginBottom: '1.5rem' }}>
                         Here are a few technologies I’ve been working with recently:

@@ -46,7 +46,7 @@ const Hero = () => {
                     color: 'var(--text-secondary)',
                     marginBottom: '3rem'
                 }}>
-                    I build and automate resilient cloud infrastructure. My background shipping production mobile apps gave me a developer-first perspective on ops — I understand what pipelines, monitoring, and deployments need to feel like from the other side.
+                    I build and automate resilient cloud infrastructure. My background shipping production mobile apps gave me a developer-first perspective on ops. I understand what pipelines, monitoring, and deployments need to feel like from the other side.
                 </p>
 
                 <a href="#projects" style={{

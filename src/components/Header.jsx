@@ -92,10 +92,14 @@ const Header = () => {
                 alignItems: 'center'
             }}>
                 <a href="/" style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '0.4rem',
                     fontSize: '1.2rem',
                     fontWeight: 800,
                     fontFamily: 'var(--font-heading)'
                 }}>
+                    <img src="/eagle.svg" alt="" style={{ width: '1.4rem', height: '1.4rem' }} />
                     ebel_frank
                 </a>
 

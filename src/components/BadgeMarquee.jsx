@@ -14,6 +14,11 @@ const badges = [
         alt: 'Kubernetes and Cloud Native Essentials badge',
         link: 'https://www.credly.com/earner/earned/badge/5050b34e-9da4-4615-b79b-31fbb5e07829',
     },
+    {
+        image: '/aws_cloud_essentials_badge.png',
+        alt: 'AWS Knowledge Cloud Essentials badge',
+        link: 'https://www.credly.com/badges/f9765f3c-4fdc-465a-a6be-f66b6579f712',
+    },
 ];
 
 const track = [...badges, ...badges];
